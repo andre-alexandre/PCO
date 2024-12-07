@@ -14,12 +14,13 @@ public enum MultiColour implements Colour {
     RED("R"),
     YELLOW("Y"),
     GREEN("G"),
-    PURPLE("P"),
+    PINK("P"),
     ORANGE("O");
 
-    // The string representation of the color.
     private String rep;
 
+    
+    
     /**
      * Constructor for the MultiColour enumeration.
      * 
@@ -29,6 +30,8 @@ public enum MultiColour implements Colour {
         this.rep = s;
     }
 
+    
+    
     /**
      * Returns the string representation of the color.
      * 
@@ -39,6 +42,8 @@ public enum MultiColour implements Colour {
         return this.rep;
     }
 
+    
+    
     /**
      * Returns an array containing all of the values of the MultiColour enum type.
      * 

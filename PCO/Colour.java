@@ -8,7 +8,7 @@ package test;
  * @author PCO team
  */
 public interface Colour {
-	
+
     /**
      * Retrieves all possible color values represented by 
      * the implementing class.
@@ -16,11 +16,4 @@ public interface Colour {
      * @return An array of Colour objects representing all possible colors.
      */
     Colour[] colours();
-    
-    /**
-     * Returns the string representation of the color.
-     * 
-     * @return String representation of the color
-     */
-    String toString();
 }

@@ -1,8 +1,17 @@
 package test;
 
+/**
+ * An implementation of the "Mastermind" game for the "Multi Colour" variant.
+ * This class defines the specific hinting and scoring rules of the game.
+ *
+ * @author PCO Team
+ */
 public class MultiColourMastermindGame extends AbstractMastermindGame {
+
     private int currentScore;
     private int hintsUsedInRound;
+    
+    
     
     public MultiColourMastermindGame(int seed, int size, Colour[] colours) {
         super(seed, size, colours);
@@ -10,10 +19,14 @@ public class MultiColourMastermindGame extends AbstractMastermindGame {
         this.hintsUsedInRound = 0;
     }
     
+    
+    
     @Override
-    public boolean isRoundFinished() {
-        return wasSecretRevealed() || numberOfTrials >= MAX_TRIALS;
+    public int score() {
+        return currentScore;
     }
+    
+    
     
     @Override
     public boolean updateScore() {
@@ -32,20 +45,18 @@ public class MultiColourMastermindGame extends AbstractMastermindGame {
         return false;
     }
     
+    
+    
     @Override
-    public int score() {
-        return currentScore;
+    public boolean isRoundFinished() {
+        return wasSecretRevealed() || numberOfTrials >= MAX_TRIALS;
     }
+    
+    
     
     @Override
     public Colour hint() {
         hintsUsedInRound++;
         return super.hint();
-    }
-    
-    @Override
-    public void startNewRound() {
-        super.startNewRound();
-        hintsUsedInRound = 0;
     }
 }
